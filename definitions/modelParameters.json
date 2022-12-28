@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "modelParameters",
+	"description": "параметры для расчета скоринговой модели",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"parametrName": {
+				"type": "string",
+				"maxLength":50,
+				"description": "наименование параметра" 
+			},
+                "parametrValue": {
+				"type": "string",
+				"maxLength":50,
+				"description": "значение параметра" 
+			},
+                "parametrType": {
+				"type": "string",
+				"maxLength":10,
+				"description": "тип параметра" 
+			},
+                "sequenceId": {
+                	"type": "integer",
+                	"description": "номер соединения"
+                }
+		}
+	}
+}

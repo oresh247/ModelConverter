@@ -1,0 +1,261 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "liabilityDedupIntLegalEntity",
+	"description": "Дедублицированные внутренние обязательства клиентов Банка  ФЛ, поступившие из КХД.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"acceptFlg": {
+				"description": "Флаг одобренного кредита. 1 - заявка утверждена и кредитный договор подготовлен к выдаче, но еще не действует; 0 - иные состояния\r\n(в случае '1' договор не попадает во вью DM_CF_CREDIT_HISTORY, а заменяется кредитной заявкой)",
+				"type": "string",
+				"maxLength": 1
+			},
+			"agreementId": {
+				"description": "Код договора",
+				"type": "string",
+				"maxLength": 50
+			},
+			"agreementRk": {
+				"description": "Ключ договора",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 1000000000000000000
+			},
+			"applicationId": {
+				"description": "Номер заявки",
+				"type": "string",
+				"maxLength": 50
+			},
+			"applyLiabilityFlg": {
+				"description": "Флаг необходимости учета обязательства",
+				"type": "string",
+				"maxLength": 1
+			},
+			"balanceAmtNc": {
+				"description": "Сумма обязательств текущая в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000000.00001
+			},
+			"closeFactDt": {
+				"description": "Дата закрытия фактическая",
+				"type": "string",
+				"format": "date"
+			},
+			"closePlanDt": {
+				"description": "Дата закрытия плановая",
+				"type": "string",
+				"format": "date"
+			},
+			"collateralRepaymentFlg": {
+				"description": "Флаг погашения за счёт обеспечения",
+				"type": "string",
+				"maxLength": 1
+			},
+			"contractStatusCd": {
+				"description": "Статус договора",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999
+			},
+			"creditProgramCd": {
+				"description": "Код кредитной программы",
+				"type": "string",
+				"maxLength": 10
+			},
+			"currencyIsoId": {
+				"description": "ISO код валюты договора",
+				"type": "string",
+				"maxLength": 3
+			},
+			"customerTypeCd": {
+				"description": "Код типа клиента",
+				"type": "string",
+				"maxLength": 1
+			},
+			"delinqClose3160Cnt": {
+				"description": "Количество закрытых просрочек 31-60",
+				"type": "integer"
+			},
+			"delinqClose5Cnt": {
+				"description": "Количество закрытых просрочек 1-5",
+				"type": "integer"
+			},
+			"delinqClose630Cnt": {
+				"description": "Количество закрытых просрочек 6-30",
+				"type": "integer"
+			},
+			"delinqClose6190Cnt": {
+				"description": "Количество закрытых просрочек 60-90",
+				"type": "integer"
+			},
+			"delinqClose91Cnt": {
+				"description": "Количество закрытых просрочек 90+",
+				"type": "integer"
+			},
+			"fullSaleFlg": {
+				"description": "Флаг полной продажи кредитного договора",
+				"type": "string",
+				"maxLength": 1
+			},
+			"liabilityTypeCd": {
+				"description": "Тип обязательства БКИ",
+				"type": "string",
+				"maxLength": 4
+			},
+			"linksFlg": {
+				"description": "Признак связи заявок/договоров",
+				"type": "integer"
+			},
+			"loanAmtNc": {
+				"description": "Сумма обязательств исходная в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"maxOverdueAmt": {
+				"description": "Максимальная сумма просрочки",
+				"type": "number"
+			},
+			"maxOverdueDaysCnt": {
+				"description": "Максимальное количество дней просрочки",
+				"type": "integer",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000.00001
+			},
+			"masterScaleRatingCd": {
+				"description": "Код грейда мастер-шкалы на отчетную дату",
+				"type": "string",
+				"maxLength": 3
+			},
+			"monthlyPaymentAmtNc": {
+				"description": "Ежемесячная долговая нагрузка",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"openDt": {
+				"description": "Дата открытия договора",
+				"type": "string",
+				"format": "date"
+			},
+			"overdueAmtNc": {
+				"description": "Сумма просрочки в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"overdueDaysCnt": {
+				"description": "Кол-во дней просрочки",
+				"type": "integer"
+			},
+			"parentAgreementId": {
+				"description": "Код рамочного договора гарантии",
+				"type": "string",
+				"maxLength": 50
+			},
+			"paymentDiscipline84M": {
+				"description": "Платежная дисциплина по БКИ за 84 месяца",
+				"type": "string",
+				"maxLength": 100
+			},
+			"principalRepaymentRate": {
+				"description": "Процент погашения основного долга",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"productGroupCd": {
+				"description": "Код продуктовой группы",
+				"type": "string",
+				"maxLength": 100
+			},
+			"productOperationalId": {
+				"description": "Код операционного продукта",
+				"type": "string",
+				"maxLength": 20
+			},
+			"productSubId": {
+				"description": "Код субпродукта",
+				"type": "string",
+				"maxLength": 100
+			},
+			"realtyCategoryCd": {
+				"description": "Код категории объекта недвижимости",
+				"type": "string",
+				"maxLength": 10
+			},
+			"restructureFlg": {
+				"description": "Признак принадлежности к продуктам реструктуризации",
+				"type": "string",
+				"maxLength": 1
+			},
+			"rootAgreementId": {
+				"description": "Код исходного договора",
+				"type": "string",
+				"maxLength": 200
+			},
+			"securedFlg": {
+				"description": "Признак принадлежности к обеспеченным/необеспеченным кредитам",
+				"type": "string",
+				"maxLength": 1
+			},
+			"sourceSystemCd": {
+				"description": "Филиал БИСквит",
+				"type": "string",
+				"maxLength": 10
+			},
+			"typeCd": {
+				"description": "Тип обязательства",
+				"type": "integer"
+			},
+			"cdPledgeAgreement": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/cdPledgeAgreement.json"
+			}
+		},
+		"required": [
+			"acceptFlg",
+			"agreementId",
+			"agreementRk",
+			"applicationId",
+			"applyLiabilityFlg",
+			"balanceAmtNc",
+			"closeFactDt",
+			"closePlanDt",
+			"collateralRepaymentFlg",
+			"contractStatusCd",
+			"creditProgramCd",
+			"currencyIsoId",
+			"customerTypeCd",
+			"delinqClose3160Cnt",
+			"delinqClose5Cnt",
+			"delinqClose630Cnt",
+			"delinqClose6190Cnt",
+			"delinqClose91Cnt",
+			"fullSaleFlg",
+			"liabilityTypeCd",
+			"linksFlg",
+			"loanAmtNc",
+			"maxOverdueAmt",
+			"maxOverdueDaysCnt",
+			"masterScaleRatingCd",
+			"monthlyPaymentAmtNc",
+			"openDt",
+			"overdueAmtNc",
+			"overdueDaysCnt",
+			"parentAgreementId",
+			"paymentDiscipline84M",
+			"principalRepaymentRate",
+			"productGroupCd",
+			"productOperationalId",
+			"productSubId",
+			"realtyCategoryCd",
+			"restructureFlg",
+			"rootAgreementId",
+			"securedFlg",
+			"sourceSystemCd",
+			"typeCd"
+		]
+	}
+}

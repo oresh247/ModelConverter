@@ -1,0 +1,108 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmCfAggDeposit",
+	"description": "Витрина из КХД. Обороты по депозитам и текущим счетам ФЛ за последние 12 месяцев",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mdmCustomerRk": {
+				"description": "Суррогатный ключ клиента MDM",
+				"type": "integer"
+			},
+			"mdmCustomerId": {
+				"description": "Ключ клиента MDM",
+				"type": "string",
+				"maxLength": 20
+			},
+			"customerTypeCd": {
+				"description": "Тип клиента",
+				"type": "string",
+				"maxLength": 1
+			},
+			"agreementRk": {
+				"description": "Ключ депозитного договора",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"yearMonth": {
+				"description": "Отчетная дата",
+				"type": "string",
+				"format": "date"
+			},
+			"contractId": {
+				"description": "Номер счета/депозита",
+				"type": "string",
+				"maxLength": 50
+			},
+			"currencyIsoId": {
+				"description": "Код валюты ISO",
+				"type": "string",
+				"maxLength": 3,
+				"default": "RUB"
+			},
+			"balanceAmt": {
+				"description": "Сумма депозита в валюте счета на конец месяца",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"balanceAmtNc": {
+				"description": "Сумма депозита в рублях на конец месяца",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"turnDebetAmt": {
+				"description": "Сумма расходных транзакций в месяце",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"turnDebetAmtNc": {
+				"description": "Сумма расходных транзакций в месяце в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"turnCreditAmt": {
+				"description": "Сумма приходных транзакций в месяце",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"turnCreditAmtNc": {
+				"description": "Сумма приходных транзакций в месяце в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"aggTurnAmt": {
+				"description": "Среднемесячный оборот по счету в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"aggTurnAmtNc": {
+				"description": "Среднемесячный оборот по счету в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"systemId": {
+				"description": "Идентификатор системы",
+				"type": "string",
+				"maxLength": 20
+			}
+		},
+		"required": [
+			"yearMonth",
+			"currencyIsoId",
+			"balanceAmtNc",
+			"turnDebetAmtNc",
+			"turnCreditAmtNc",
+			"aggTurnAmtNc"
+		]
+	}
+}

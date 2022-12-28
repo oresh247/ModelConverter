@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "required": [
+    "channelCd",
+    "loanApplicationCreateDateTime",
+    "loanApplicationExtId",
+    "statusCdExt",
+    "technologyCd"
+  ],
+  "properties": {
+    "channelCd": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 20
+    },
+    "creditParameters": {
+      "$ref": "#/definitions/CreditParamExtDtoReq"
+    },
+    "front": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/FrontDto"
+      }
+    },
+    "loanApplicationCreateDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "loanApplicationExtId": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100
+    },
+    "loanRequestId": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 36
+    },
+    "statusCdExt": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 18
+    },
+    "technologyCd": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 18
+    }
+  },
+  "title": "LoanApplicationDtoReq"
+}

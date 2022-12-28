@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "legalEntity": {
+      "$ref": "#/definitions/LegalEntityDto"
+    }
+  },
+  "title": "LegalEntityRequest"
+}

@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCorpAggSalaryTurn",
+	"description": "Витрина из КХД. ПП ЮЛ/ИП ИНФОРМАЦИЯ ПО ЗАРПЛАТНЫМ НАЧИСЛЕНИЯМ КЛИЕНТОВ-ЮРИДИЧЕСКИХ ЛИЦ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mdmCustomerId": {
+				"description": "Идентификатор клиента в MDM CIF",
+				"type": "string",
+				"maxLength": 50
+			},
+			"mdmCustomerRk": {
+				"description": "Суррогатный ключ клиента-ЮЛ в MDM",
+				"type": "integer"
+			},
+			"yearMonth": {
+				"description": "Дата последнего дня месяца периода",
+				"type": "string",
+				"format": "date"
+			},
+			"individualCnt": {
+				"description": "Количество получателей зарплаты",
+				"type": "integer",
+				"minimum": 0
+			},
+			"debetSalaryTurnAmtNc": {
+				"description": "Объем зарплатных начислений в национальной валюте. Рассчитывается как сумма начислений в рублях за период",
+				"type": "number",
+				"minimum": 0.00000,
+				"maximum": 99999999999999999999999.99999
+			},
+			"debetSalaryTurnAmt": {
+				"description": "Объем зарплатных начислений в валюте. Рассчитывается как сумма начислений за период",
+				"type": "number",
+				"minimum": 0.00000,
+				"maximum": 99999999999999999999999.99999
+			},
+			"currencyIsoId": {
+				"description": "ISO код валюты",
+				"type": "string",
+				"maxLength": 3
+			}
+		},
+		"required": [
+			"mdmCustomerId",
+			"yearMonth",
+			"individualCnt",
+			"debetSalaryTurnAmtNc"
+		]
+	}
+}

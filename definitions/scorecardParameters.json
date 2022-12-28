@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "scorecardParameters",
+	"description": "СПР. Витрина содержащая данные об использованных параметрах скоркарты.",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"parameterName": {
+				"title": "-------------",
+				"type": "string",
+				"maxLength": 20
+			},
+			"parameterValue": {
+				"title": "--------------",
+				"type": "string",
+				"maxLength": 20
+			},
+			"parameterBucket": {
+				"title": "--------------",
+				"type": "string",
+				"maxLength": 20
+			},
+			"parameterWeight": {
+				"description": "-________________",
+				"type": "string",
+				"maxLength": 20
+			}
+		},
+		"required": [
+			"parameterName",
+			"parameterValue",
+			"parameterBucket",
+			"parameterWeight"
+		]
+	}
+}

@@ -1,0 +1,113 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "legalEntity",
+	"description": "Cведения о ЮЛ - заемщике",
+	"type": "object",
+	"properties": {
+		"mdmId": {
+			"description": "ИД ЮЛ в МДМ",
+			"type": "string",
+			"maxLength": 100
+		},
+		"salaryProjectFlg": {
+			"description": "Признак зарплатного проекта",
+			"type": "boolean"
+		},
+		"legalFormMdmId": {
+			"description": "Форма организации",
+			"type": "string"
+		},
+		"fullName": {
+			"description": "Полное название",
+			"type": "string",
+			"maxLength": 500
+		},
+		"shortName": {
+			"description": "Сокращенное название",
+			"type": "string",
+			"maxLength": 500
+		},
+		"tin": {
+			"description": "ИНН",
+			"type": "string"
+		},
+		"ogrn": {
+			"description": "ОГРН",
+			"type": "string"
+		},
+		"activityKindMdmId": {
+			"description": "Код типа активности",
+			"type": "string"
+		},
+		"businessRegDate": {
+			"description": "Дата регистрации бизнеса",
+			"type": "string",
+			"format": "date"
+		},
+		"monthlyProceeds": {
+			"description": "Средний оборот за месяц",
+			"type": "integer"
+		},
+		"bkiConsentObtain": {
+			"description": "Согласие на запрос в бюро кредитных историй",
+			"type": "string"
+		},
+		"bkiConsentObtainDate": {
+			"type": "string",
+			"format": "date"
+		},
+		"countryOfBusinessRegCd": {
+			"type": "string"
+		},
+		"businessRegistrationDt": {
+			"description": "Дата регистрации бизнеса",
+			"type": "string",
+			"format": "date"
+		},
+		"addresses": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/addresses.json"
+		},
+		"phones": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/phones.json"
+		},
+		"legalEntityInfo": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/legalEntityInfo.json"
+		},
+		"dmPprofCorpAccount": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCorpAccount.json"
+		},
+		"dmPprofCorpAggSalaryTurn": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCorpAggSalaryTurn.json"
+		},
+		"dmPprofCorpAggClearTurn": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCorpAggClearTurn.json"
+		},
+		"logParameters": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/logParameters.json"
+		},
+		"liabilityDedupLegalEntity": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/liabilityDedupLegalEntity.json"
+		},
+		"modelStorage": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/modelStorage.json"
+		}
+	},
+	"required": [
+		"mdmId",
+		"salaryProjectFlg",
+		"legalFormMdmId",
+		"fullName",
+		"shortName",
+		"tin",
+		"ogrn",
+		"activityKindMdmId",
+		"businessRegDate",
+		"monthlyProceeds",
+		"bkiConsentObtain",
+		"bkiConsentObtainDate",
+		"countryOfBusinessRegCd",
+		"businessRegistrationDt",
+		"addresses",
+		"phones"
+	]
+}

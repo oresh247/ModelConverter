@@ -1,0 +1,10 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "legalEntityInfo",
+	"description": "Дополнительная информация из КХД по ЮЛ",
+	"properties": {
+		"dmPprofCustomerSegment": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCustomerSegment.json"
+		}
+	}
+}

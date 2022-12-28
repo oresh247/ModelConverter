@@ -1,0 +1,107 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmCfCardTurn",
+	"description": "Витрина из КХД. Детальная информация по договору (специальный карточный счет) ФЛ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"agreementRk": {
+				"description": "Ключ договора пластиковой карты",
+				"type": "number",
+				"minimum": 0,
+				"maximum": 1000000000000000000
+			},
+			"contractId": {
+				"description": "Номер договора пластиковой карты",
+				"type": "string",
+				"maxLength": 50
+			},
+			"yearMonth": {
+				"description": "Дата последнего дня месяца периода",
+				"type": "string",
+				"format": "date"
+			},
+			"sourceSystemCd": {
+				"description": "Филиал БИСКВИТ или эксБМ",
+				"type": "string",
+				"maxLength": 10
+			},
+			"customerMdmId": {
+				"description": "Идентификатор клиента в MDM",
+				"type": "string",
+				"maxLength": 50
+			},
+			"currencyIsoId": {
+				"description": "ISO код валюты",
+				"type": "string"
+			},
+			"debetTurnSalaryAmt": {
+				"description": "Суммарный оборот по зарплатным транзакциям в разрезе месяца в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"debetTurnAmt": {
+				"description": "Суммарный оборот по приходу в разрезе месяца, без учета зарплатных транзакций в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"creditTurnAmt": {
+				"description": "Суммарный оборот по расходу в разрезе месяца в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"balanceAmt": {
+				"description": "Остаток в валюте счета на конец периода",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"salaryFlg": {
+				"type": "boolean"
+			},
+			"employerTaxPayerNum": {
+				"type": "string",
+				"maxLength": 200
+			},
+			"debetTurnPensionAmt": {
+				"description": "Суммарный оборот по пенсионным транзакциям в разрезе месяца в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"debetTurnPensionAmtNc": {
+				"description": "Суммарный оборот по пенсионным транзакциям в разрезе месяца в национальной валюте",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"debetTurnIspSalaryAmt": {
+				"description": "Суммарный оборот по зарплатным транзакциям ИЗП в разрезе месяца в валюте счета",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			},
+			"debetTurnIspSalaryAmtNc": {
+				"description": "Суммарный оборот по пенсионным транзакциям в разрезе месяца в национальной валюте",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000.00001
+			}
+		},
+		"required": [
+			"yearMonth",
+			"currencyIsoId",
+			"debetTurnSalaryAmt",
+			"debetTurnAmt",
+			"creditTurnAmt",
+			"balanceAmt",
+			"salaryFlg",
+			"debetTurnPensionAmt",
+			"debetTurnPensionAmtNc"
+		]
+	}
+}

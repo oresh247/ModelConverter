@@ -1,0 +1,9 @@
+*.log
+*.config
+*.cmd
+~*.xlsm
+*.pptx
+*.xlsx
+*.xls
+model.json
+apidocs.json

@@ -1,0 +1,75 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCorpAggClearTurn",
+	"description": "Витрина из КХД. ПП ЮЛ/ИП Очищенные обороты клиентов-ЮЛ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"yearMonth": {
+				"description": "Отчетная дата",
+				"type": "string",
+				"format": "date"
+			},
+			"gccLoanIssueAmt": {
+				"description": "Сумма выдач по кредитам на расчетные счета клиентов одного ГСЗ",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 999999999999999999.99999
+			},
+			"gccInternalTransferAmt": {
+				"description": "Сумма внутренних переводов между расчетными счетами клиентов одного ГСЗ",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 999999999999999999.99999
+			},
+			"gccClearDebetAmt": {
+				"description": "Сумма проводок списаний с расчетных счетов клиентов ГСЗ без учета внутренних проводок",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 999999999999999999.99999
+			},
+			"gccClearDebetEntryCnt": {
+				"description": "Количество проводок списаний с расчетных счетов клиентов ГСЗ без учета внутренних проводок",
+				"type": "integer"
+			},
+			"gccClearCreditAmt": {
+				"description": "Сумма проводок начислений на расчетные счета клиентов ГСЗ без учета внутренних проводок и выдач по кредитам",
+				"type": "integer",
+				"minimum": 0
+			},
+			"gccClearCreditEntryCnt": {
+				"description": "Количество проводок начислений на расчетные счета клиентов ГСЗ без учета внутренних проводок и выдач по кредитам",
+				"type": "integer"
+			},
+			"noAccountTurnWeekCnt": {
+				"description": "Количество пустых календарных недель без оборотов по р/с за отчетный месяц",
+				"type": "integer"
+			},
+			"accountCounterpartyCnt": {
+				"description": "Количество контрагентов в поступлениях на р/с за последние 6 полных календарных месяцев",
+				"type": "integer"
+			},
+			"mdmCustomerId": {
+				"description": "Идентификатор клиента в MDM",
+				"type": "string",
+				"maxLength": 100
+			},
+			"mdmCustomerRk": {
+				"description": "Суррогатный ключ клиента в MDM",
+				"type": "integer"
+			}
+		},
+		"required": [
+			"yearMonth",
+			"gccLoanIssueAmt",
+			"gccInternalTransferAmt",
+			"gccClearDebetAmt",
+			"gccClearDebetEntryCnt",
+			"gccClearCreditAmt",
+			"gccClearCreditEntryCnt",
+			"noAccountTurnWeekCnt",
+			"accountCounterpartyCnt"
+		]
+	}
+}

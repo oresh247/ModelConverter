@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "decisionResult": {
+      "$ref": "#/definitions/DecisionResultDto"
+    },
+    "legalEntity": {
+      "$ref": "#/definitions/LegalEntityDtoRes"
+    },
+    "loanApplication": {
+      "$ref": "#/definitions/LoanApplicationDtoRes"
+    },
+    "sprResult": {
+      "$ref": "#/definitions/SprResultDtoRes"
+    }
+  },
+  "title": "DecisionRequestRes"
+}

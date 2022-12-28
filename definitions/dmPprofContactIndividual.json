@@ -1,0 +1,78 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofContactIndividual",
+	"description": "Витрина из КХД. Контактные лица-ФЛ для клиентов-ЮЛ",
+	"type": "object",
+	"properties": {
+		"mdmCustomerId": {
+			"description": "MDM_ID",
+			"type": "string",
+			"maxLength": 100
+		},
+		"lastNm": {
+			"description": "Фамилия",
+			"type": "string",
+			"maxLength": 50
+		},
+		"firstNm": {
+			"description": "Имя",
+			"type": "string",
+			"maxLength": 50
+		},
+		"middleNm": {
+			"description": "Отчество",
+			"type": "string",
+			"maxLength": 50
+		},
+		"birthDt": {
+			"description": "Дата рождения",
+			"type": "string",
+			"format": "date"
+		},
+		"ageCnt": {
+			"description": "Возраст учредителя",
+			"type": "integer"
+		},
+		"birthPlaceNm": {
+			"description": "Место рождения",
+			"type": "string",
+			"maxLength": 200
+		},
+		"citizenshipGeographyCd": {
+			"description": "Страна гражданства",
+			"type": "string",
+			"maxLength": 30
+		},
+		"hasPrivilegePackageFlg": {
+			"description": "Флаг наличия пакета Привилегия",
+			"type": "string",
+			"maxLength": 1
+		},
+		"hasMasterAccountFlg": {
+			"description": "Флаг наличия у клиента мастер-счета",
+			"type": "string",
+			"maxLength": 1
+		},
+		"bkiConsentObtainFlg": {
+			"description": "Флаг получения согласия на запрос БКИ",
+			"type": "string",
+			"maxLength": 1
+		},
+		"bkiConsentObtainDt": {
+			"description": "Дата получения согласия на запрос БКИ",
+			"type": "string",
+			"format": "date"
+		},
+		"genderCd": {
+			"description": "Пол клиента",
+			"type": "string",
+			"maxLength": 1
+		}
+	},
+	"required": [
+		"birthDt",
+		"citizenshipGeographyCd",
+		"bkiConsentObtainFlg",
+		"bkiConsentObtainDt"
+	]
+}

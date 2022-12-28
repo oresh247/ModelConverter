@@ -1,0 +1,305 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmCfAggCreditCard",
+	"description": "Витрина из КХД. Помесячные данные по кредитным картам ФЛ за последние 12 месяцев",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"cardAgreementRk": {
+				"description": "Суррогатный ключ договора пластиковой карты",
+				"type": "number",
+				"minimum": 0,
+				"maximum": 1000000000000000000
+			},
+			"cardContractId": {
+				"description": "Код договора пластиковой карты",
+				"type": "string",
+				"maxLength": 50
+			},
+			"yearMonth": {
+				"description": "Дата последнего дня месяца периода",
+				"type": "string",
+				"format": "date"
+			},
+			"cardNum": {
+				"description": "номер пластиковой карты",
+				"type": "string",
+				"maxLength": 100
+			},
+			"cardTypeCd": {
+				"description": "Тип карты/мастер счета",
+				"type": "string",
+				"maxLength": 20
+			},
+			"cardStatusCd": {
+				"description": "Код статуса карты",
+				"type": "string",
+				"maxLength": 35
+			},
+			"cardStatusDesc": {
+				"description": "Описание статуса карты",
+				"type": "string",
+				"maxLength": 1000
+			},
+			"mdmCustomerRk": {
+				"description": "Ключ клиента",
+				"type": "integer"
+			},
+			"mdmCustomerId": {
+				"description": "Код клиента",
+				"type": "integer"
+			},
+			"mdmCustomerTypeCd": {
+				"description": "Код типа клиента",
+				"type": "string",
+				"maxLength": 1
+			},
+			"currencyRk": {
+				"description": "Ключ валюты клиента",
+				"type": "integer"
+			},
+			"currencyIsoId": {
+				"description": "Код ISO валюты карты",
+				"type": "string",
+				"maxLength": 4
+			},
+			"balanceAmt": {
+				"description": "Сумма остатка средств",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"balanceAmtNc": {
+				"description": "Сумма остатка средств в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"debetTurnAmt": {
+				"description": "Сумма начислений на карту без учета зарплатных начислений за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"debetTurnAmtNc": {
+				"description": "Сумма начислений по карте за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"creditTurnAmt": {
+				"description": "Сумма расходных операций по карте за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"creditTurnAmtNc": {
+				"description": "Сумма расходных операций по карте за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"creditLimitAmt": {
+				"description": "Кредитный лимит на последний календарный день месяца",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"creditLimitAmtNc": {
+				"description": "Кредитный лимит на последний календарный день месяца в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"prolongationCnt": {
+				"description": "количество пролонгаций за отчетный месяц",
+				"type": "integer"
+			},
+			"minPaymentAmt": {
+				"description": "Минимальный платеж по карте за последние 12 месяцев",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"minPaymentAmtNс": {
+				"description": "Минимальный платеж по карте за последние 12 месяцев в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"repaymentAmt": {
+				"description": "Сумма погашений за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"repaymentAmtNс": {
+				"description": "Сумма погашений за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"nextPlanIntPaymentAmt": {
+				"description": "Сумма плановых процентов по кредиту к выплате в дату следующего платежа",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"nextPlanIntPaymentAmtNc": {
+				"description": "Сумма плановых процентов по кредиту к выплате в дату следующего платежа в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"debtMonthlyAmt": {
+				"description": "Сумма ежедневного долга за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"debtMonthlyAmtNc": {
+				"description": "Сумма ежедневного долга за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"utilizationDayCnt": {
+				"description": "Количество дней с ненулевой утилизацией по карте за отчетный месяц",
+				"type": "integer"
+			},
+			"peakDebtAmt": {
+				"description": "Пиковое значение основного долга за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"peakDebtAmtNc": {
+				"description": "Пиковое значение основного долга за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"yearCashCreditAmt": {
+				"description": "Общая сумма обналиченных денежных средств за счет кредитной составляющей за последние 12 месяцев",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"yearCashCreditAmtNc": {
+				"description": "Общая сумма обналиченных денежных средств за счет кредитной составляющей за последние 12 месяцев в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"cashTransactionCnt": {
+				"description": "Количество расходных транзакций снятия наличных за отчетный месяц",
+				"type": "integer"
+			},
+			"cashAmt": {
+				"description": "Сумма обналиченных денежных средств за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"cashAmtNc": {
+				"description": "Сумма обналиченных денежных средств за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"cashCreditTransactionCnt": {
+				"description": "Количество расходных транзакций снятия наличных за счет кредитных средств за отчетный месяц",
+				"type": "integer"
+			},
+			"cashCreditAmt": {
+				"description": "Сумма обналиченных денежных средств за счет кредитных средств за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"cashCreditAmtNc": {
+				"description": "Сумма обналиченных денежных средств за счет кредитных средств за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"retailTransactionCnt": {
+				"description": "Количество расходных транзакций в торговых сетях/интернете за отчетный месяц",
+				"type": "integer"
+			},
+			"retailAmt": {
+				"description": "Сумма расходных транзакций в торговых сетях/интернете за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"retailAmtNc": {
+				"description": "Сумма расходных транзакций в торговых сетях/интернете за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"retailCreditTransactionCnt": {
+				"description": "Количество расходных транзакций в торговых сетях/интернете за счет кредитных средств за отчетный месяц",
+				"type": "integer"
+			},
+			"retailCreditAmt": {
+				"description": "Сумма списаний в торговых сетях/интернете за счет кредитных средств за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"retailCreditAmtNc": {
+				"description": "Сумма списаний в торговых сетях/интернете за счет кредитных средств за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"abroadTransactionCnt": {
+				"description": "Количество расходных транзакций, совершенных за границей",
+				"type": "integer"
+			},
+			"abroadAmt": {
+				"description": "Сумма расходных транзакций, совершенных за границей за отчетный месяц",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"abroadAmtNc": {
+				"description": "Сумма расходных транзакций, совершенных за границей за отчетный месяц в рублях",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 100000000000000000000000000
+			},
+			"notNatCurrTransactionCnt": {
+				"description": "Количество транзакций, совершенных не в национальной валюте",
+				"type": "integer"
+			},
+			"notNatCurrAmtNc": {
+				"description": "Сумма транзакций, совершенных не в национальной валюте в рублях",
+				"type": "integer"
+			},
+			"systemId": {
+				"description": "идентификатор системы",
+				"type": "string"
+			},
+			"dmCfCardTurn": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfCardTurn.json"
+			}
+		},
+		"required": [
+			"yearMonth",
+			"cardNum",
+			"cardTypeCd",
+			"cardStatusCd",
+			"currencyIsoId",
+			"debetTurnAmtNc",
+			"creditTurnAmtNc",
+			"debtMonthlyAmtNc",
+			"cashCreditAmtNc",
+			"retailAmtNc",
+			"dmCfCardTurn"
+		]
+	}
+}

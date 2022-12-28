@@ -1,0 +1,6 @@
+{
+  "LoanApplicationDtoReq": "LoanApplicationDtoRes",
+  "loanApplication": "LoanApplicationDto",
+  "creditParameters" : "CreditParamExtDto",
+  "front": "FrontDto"
+}

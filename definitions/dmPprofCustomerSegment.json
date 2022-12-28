@@ -1,0 +1,63 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCustomerSegment",
+	"description": "Витрина из КХД. Сегмент клиентов-ЮЛ для расчета маркетингового предложения",
+	"type": "object",
+	"properties": {
+		"trmPartyId": {
+			"description": "Идентификатор клиента из TRM (PARTY_ID) ",
+			"type": "integer"
+		},
+		"mdmCustomerId": {
+			"description": "MDM_ID Юр.лица/ИП - участника маркетинговой кампании.",
+			"type": "string",
+			"maxLength": 100
+		},
+		"customerSegmentCd": {
+			"description": "Сегмент участника",
+			"type": "string",
+			"maxLength": 100
+		},
+		"businessRegistrationDt": {
+			"description": "Дата регистрации бизнеса",
+			"type": "string",
+			"format": "date"
+		},
+		"licActivityKindNm": {
+			"description": "Вид деятельности",
+			"type": "string",
+			"maxLength": 100
+		},
+		"startDttm": {
+			"description": "Дата/Время создания записи",
+			"type": "string",
+			"format": "date-time"
+		},
+		"finishDttm": {
+			"description": "Дата/Время истечения срока действия записи.",
+			"type": "string",
+			"format": "date-time"
+		},
+		"trmLeadKeyId": {
+			"description": "Уникальный номер участника маркетинговой кампании ЮЛ",
+			"type": "string",
+			"maxLength": 18
+		},
+		"sequenceId": {
+			"description": "Порядковый номер записи",
+			"type": "integer"
+		},
+		"dmPprofCorpCustomer": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCorpCustomer.json"
+		}
+	},
+	"required": [
+		"trmPartyId",
+		"mdmCustomerId",
+		"customerSegmentCd",
+		"businessRegistrationDt",
+		"licActivityKindNm",
+		"startDttm",
+		"finishDttm"
+	]
+}

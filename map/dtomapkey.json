@@ -1,0 +1,7 @@
+{ 
+  "dmPprofCustomerSegment_for_applicationDto": "dmPprofCustomerSegmentDto",
+  "LegalEntityWithInfoDto": "legalEntityInfoDto",
+  "loanApplicationDto": "LoanApplicationDtoRes",
+  "creditParameters" : "CreditParamExtDtoRes",
+  "loanApplication": "LoanApplicationDtoRes"
+}

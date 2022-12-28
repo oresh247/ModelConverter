@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "loanRequestId": {
+      "type": "string"
+    }
+  },
+  "title": "LoanRequestIdDto"
+}

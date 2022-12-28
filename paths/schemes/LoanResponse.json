@@ -1,0 +1,10 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "LoanResponse",
+	"description": "Comment describing your JSON Schema",
+	"properties": {
+		"loanRequest": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/loanApplication.json"
+		}
+	}
+}

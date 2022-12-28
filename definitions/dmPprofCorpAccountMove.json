@@ -1,0 +1,93 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCorpAccountMove",
+	"description": "Витрина из КХД. ПП ЮЛ/ИП ОБЪЕМНЫЕ ПОКАЗАТЕЛИ ПО СЧЕТАМ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"accountRK": {
+				"description": "Суррогатный ключ счета",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999999999999999999
+			},
+			"accountNum": {
+				"description": "Номер лицевого счета",
+				"type": "string",
+				"maxLength": 100
+			},
+			"curencyIsoId": {
+				"description": "Код валюты ISO",
+				"type": "string",
+				"maxLength": 3,
+				"default": "RUB"
+			},
+			"mdmCustomerRk": {
+				"description": "Суррогатный ключ клиента в MDM",
+				"type": "integer"
+			},
+			"mdmCustomerId": {
+				"description": "Код клиента MDM",
+				"type": "string",
+				"maxLength": 100
+			},
+			"averageBalanceAmt": {
+				"description": "Сумма среднемесячного остатка на счете",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"sumDailyBalanceAmt": {
+				"description": "Сумма дневных остатков на начало дня по счету",
+				"type": "number",
+				"minimum": 0.00000,
+				"maximum": 99999999999999999999999.99999
+			},
+			"balanceDayCnt": {
+				"description": "Количество календарных дней существования остатков",
+				"type": "integer",
+				"minimum": 0
+			},
+			"averageTurnDebetAmt": {
+				"description": "Сумма среднемесячного оборота по дебету",
+				"type": "number",
+				"minimum": 0.00000
+			},
+			"sumDailyTurnDebetAmt": {
+				"description": "Сумма дневных оборотов по дебету",
+				"type": "number",
+				"minimum": 0.00000,
+				"maximum": 99999999999999999999999.99999
+			},
+			"turnDebetDayCnt": {
+				"description": "Количество календарных дней существования оборотов по дебету",
+				"type": "integer",
+				"minimum": 0
+			},
+			"averageTurnCreditAmt": {
+				"description": "Сумма среднемесячного оборота по кредиту",
+				"type": "number",
+				"minimum": 0.00000,
+				"maximum": 99999999999999999999999.99999
+			},
+			"turnCreditDayCnt": {
+				"description": "Количество календарных дней существования оборотов по кредиту",
+				"type": "integer",
+				"minimum": 0
+			},
+			"reportDt": {
+				"description": "Отчетная дата",
+				"type": "string",
+				"format": "date"
+			}
+		},
+		"required": [
+			"accountNum",
+			"curencyIsoId",
+			"mdmCustomerId",
+			"averageBalanceAmt",
+			"averageTurnDebetAmt"
+		]
+	}
+}

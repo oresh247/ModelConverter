@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "legalApplicationParametersBcs": {
+      "$ref": "#/definitions/LegalApplicationParametersBcsDto"
+    },
+    "legalApplicationStatusBcs": {
+      "$ref": "#/definitions/LegalApplicationStatusBcsDto"
+    },
+    "legalPersonalInformationBcs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LegalPersonalInformationBcsDto"
+      }
+    }
+  },
+  "title": "BcsRequest"
+}

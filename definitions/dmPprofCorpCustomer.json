@@ -1,0 +1,127 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCorpCustomer",
+	"description": "Витрина из КХД. ПП ЮЛ/ИП Клиент-юридическое лицо",
+	"type": "object",
+	"properties": {
+		"customerSegmentMdmId": {
+			"description": "Сегмент клиента",
+			"type": "string",
+			"maxLength": 10
+		},
+		"salaryProjectFlg": {
+			"description": "Флаг зарплатного проекта",
+			"type": "boolean"
+		},
+		"systemId": {
+			"description": "Идентификатор системы",
+			"type": "string",
+			"maxLength": 20
+		},
+		"legalFormCd": {
+			"description": "Организационно-правовая форма",
+			"type": "string",
+			"maxLength": 5
+		},
+		"taxPayerNum": {
+			"description": "ИНН",
+			"type": "string",
+			"maxLength": 12
+		},
+		"ogrnNum": {
+			"description": "ОГРН",
+			"type": "string",
+			"maxLength": 5
+		},
+		"bussinessLifetimeMonthCnt": {
+			"description": "Срок существования бизнеса",
+			"type": "integer"
+		},
+		"monthlyNetProfitAmt": {
+			"description": "Среднемесячная чистая прибыль\t",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 10000000000000000000000.00001
+		},
+		"monthlyProceedsAmt": {
+			"description": "среднемесячная прибыль",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 10000000000000000000000.00001
+		},
+		"psScore": {
+			"description": "Поведенческий скоринг ПС КМБ\t",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 10000000000000000000000.00001
+		},
+		"bcoOperationCnt": {
+			"description": "Количество операций в БКО за последние 6 месяцев.",
+			"type": "integer"
+		},
+		"bkiConsentObtainFlg": {
+			"description": "Флаг получения согласия на запрос БКИ",
+			"type": "string",
+			"maxLength": 1
+		},
+		"bkiConsentObtainDt": {
+			"description": "Дата получения согласия на запрос БКИ",
+			"type": "string",
+			"format": "date"
+		},
+		"citizenshipGeographyCd": {
+			"description": "Страна/ Гражданство (код?)",
+			"type": "string",
+			"maxLength": 30
+		},
+		"pledgeCoverageRate": {
+			"description": "Объем покрытия ссуды твердым залогом в %",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 1000000000000000000000000.00001
+		},
+		"mdmCustomerRk": {
+			"description": "Суррогатный ключ клиента",
+			"type": "integer"
+		},
+		"mdmCustomerId": {
+			"description": "Идентификатор клиента в МДМ",
+			"type": "integer"
+		},
+		"fullName": {
+			"description": "Полное наименование",
+			"type": "string",
+			"maxLength": 255
+		},
+		"shortName": {
+			"description": "сокращенное наименование",
+			"type": "string",
+			"maxLength": 255
+		},
+		"licActivityKindNm": {
+			"description": "Вид деятельности",
+			"type": "string",
+			"maxLength": 255
+		}
+	},
+	"required": [
+		"customerSegmentMdmId",
+		"salaryProjectFlg",
+		"systemId",
+		"legalFormCd",
+		"taxPayerNum",
+		"ogrnNum",
+		"monthlyNetProfitAmt",
+		"psScore",
+		"bcoOperationCnt",
+		"bkiConsentObtainFlg",
+		"bkiConsentObtainDt",
+		"citizenshipGeographyCd",
+		"pledgeCoverageRate",
+		"mdmCustomerRk",
+		"mdmCustomerId",
+		"fullName",
+		"shortName",
+		"licActivityKindNm"
+	]
+}

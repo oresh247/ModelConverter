@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "sprResult",
+	"description": "Таблица с результатами обработки СПР",
+	"type": "object",
+	"properties": {
+		"stageCd": {
+			"description": "Стадия обработки",
+			"type": "integer",
+			"minimum": 1,
+			"maximum": 9999999999
+		},
+		"nextStageCd": {
+			"description": "Следующая стадия обработки",
+			"type": "integer",
+			"minimum": 1,
+			"maximum": 9999999999
+		},
+		"sprExtCallRoute": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/sprExtCallRoute.json"
+		}
+	},
+	"required": [
+		"stageCd",
+		"nextStageCd"
+	]
+}

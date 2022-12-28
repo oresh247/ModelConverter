@@ -1,0 +1,73 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCustomerSegmentRltn",
+	"description": "Витрина из КХД. Связанные с сегментом для расчета маркетингового предложения клиенты-ФЛ",
+	"type": "object",
+	"properties": {
+		"customerId": {
+			"description": "Суррогатный ключ ФЛ в СКМБ",
+			"type": "number",
+			"minimum": 1,
+			"maximum": 99999999999999999999
+		},
+		"trmleadKeyId": {
+			"description": "Уникальный номер участника маркетинговой кампании ЮЛ",
+			"type": "string",
+			"maxLength": 18
+		},
+		"legalEntityId": {
+			"description": "Суррогатный ключ ЮЛ в СКМБ",
+			"type": "number",
+			"maxLength": 99999999999999999999
+		},
+		"mdmCustomerId": {
+			"description": "MDM_ID Юр.лица/Ип – участника маркетинговой кампании",
+			"type": "string",
+			"maxLength": 100
+		},
+		"founderMdmCustomerId": {
+			"description": "Доля учредителя",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 99999999999999999999999.99999
+		},
+		"founderRelationCd": {
+			"description": "Отношение к Юр.лицу/ИП. Учредитель или Владелец бизнеса",
+			"type": "string",
+			"maxLength": 50
+		},
+		"founderPart": {
+			"description": "MDM_ID учредителя ФЛ",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dmPprofContactIndividual": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofContactIndividual.json"
+		},
+		"dmPprofCustomerDocument": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCustomerDocument.json"
+		},
+		"dmCfAggCreditCard": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfAggCreditCard.json"
+		},
+		"dmCfAggDebetCard": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfAggDedetCard.json"
+		},
+		"dmCfAggDeposit": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfAggDeposit.json"
+		},
+		"dmCfAccount": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfAccount.json"
+		},
+		"liabilityDedupIndividual": {
+		},
+		"logParametersIndividual": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/logParametersIndividual.json"
+		}
+	},
+	"required": [
+		"customerId",
+		"founderRelationCd",
+		"founderPart"
+	]
+}

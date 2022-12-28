@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCustomerDocument",
+	"description": "Витрина из КХД. ДОКУМЕНТЫ КЛИЕНТОВ-ФЛ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mdmCustomerId": {
+				"description": "MDM_ID",
+				"type": "string",
+				"maxLength": 100
+			},
+			"documentTypeCd": {
+				"description": "тип документа",
+				"type": "string",
+				"maxLength": 30
+			},
+			"docSeries": {
+				"description": "серия документа",
+				"type": "string",
+				"maxLength": 100
+			},
+			"docNum": {
+				"description": "номер документа",
+				"type": "string",
+				"maxLength": 100
+			},
+			"issueDt": {
+				"description": "дата выдачи документа",
+				"type": "string",
+				"format": "date"
+			},
+			"expirationDt": {
+				"description": "дата окончания срока действия",
+				"type": "string",
+				"format": "date"
+			},
+			"issuerNm": {
+				"description": "наименование подразделения, выдавшего паспорт",
+				"type": "string",
+				"maxLength": 500
+			},
+			"departmentCd": {
+				"description": "код подразделения",
+				"type": "string",
+				"maxLength": 30
+			}
+		},
+		"required": [
+			"documentTypeCd",
+			"docSeries",
+			"docNum",
+			"issueDt",
+			"expirationDt",
+			"issuerNm",
+			"departmentCd"
+		]
+	}
+}

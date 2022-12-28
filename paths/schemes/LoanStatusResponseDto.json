@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "loanApplication": {
+      "$ref": "#/definitions/LoanStatusDto"
+    }
+  },
+  "title": "LoanStatusResponseDto"
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "front",
+	"description": "блок передачи данных между СУБО и \"Стратегией\"",
+	"type": "array",
+	"items": {
+		"title": "Front",
+		"properties": {
+			"parameterName": {
+				"description": "Название параметра",
+				"type": "string",
+				"maxLength": 200
+			},
+			"parameterValue": {
+				"description": "Значение параметра",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"additionalProperties": false
+	}
+}

@@ -1,0 +1,174 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "liabilityDedupAppLegalEntity",
+	"description": "Дедуплицированные внутренние заявки ЮЛ",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"acceptFlg": {
+				"description": "Флаг утвержденной заявки",
+				"type": "string",
+				"maxLength": 1
+			},
+			"agreementId": {
+				"description": "Код заявки",
+				"type": "string",
+				"maxLength": 50
+			},
+			"appStatusCd": {
+				"description": "Статус заявки",
+				"type": "string",
+				"maxLength": 50
+			},
+			"applicationDt": {
+				"description": "Дата открытия заявки",
+				"type": "string",
+				"format": "date"
+			},
+			"applicationRk": {
+				"description": "Ключ заявки",
+				"type": "integer",
+				"minimum": 1,
+				"maximum": 10000000000000000000
+			},
+			"applyLiabilityFlg": {
+				"description": "Флаг необходимости учета обязательства",
+				"type": "string",
+				"maxLength": 1
+			},
+			"balanceAmtNc": {
+				"description": "Сумма обязательств текущая (руб.)",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"collateralRepaymentFlg": {
+				"description": "Флаг погашения за счёт обеспечения",
+				"type": "string",
+				"maxLength": 1
+			},
+			"creditProgramCd": {
+				"description": "Код кредитной программы",
+				"type": "string",
+				"maxLength": 10
+			},
+			"currencyIsoId": {
+				"description": "ISO код валюты запрошенного кредита",
+				"type": "string",
+				"maxLength": 3,
+				"default": "RUB"
+			},
+			"customerTypeCd": {
+				"description": "Код типа клиента",
+				"type": "string",
+				"maxLength": 1
+			},
+			"deletedFlg": {
+				"description": "Флаг удаления записи",
+				"type": "string",
+				"maxLength": 1
+			},
+			"isActiveFlg": {
+				"description": "Флаг актуальности записи",
+				"type": "string",
+				"maxLength": 1
+			},
+			"lastStateFlg": {
+				"description": "Флаг последнего перехода заявки в статус",
+				"type": "string",
+				"maxLength": 1
+			},
+			"liabilityTypeCd": {
+				"description": "Тип обязательства БКИ",
+				"type": "string",
+				"maxLength": 4
+			},
+			"linksFlg": {
+				"description": "Признак связи заявок/договоров",
+				"type": "integer",
+				"maximum": 1
+			},
+			"loanAmtNc": {
+				"description": "Сумма обязательств исходная (руб.)",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 1000000000000000000000.00001
+			},
+			"monthlyPaymentAmtNc": {
+				"description": "Ежемесячная выплата (руб.)",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000.00001
+			},
+			"productGroupCd": {
+				"description": "Код продуктовой группы",
+				"type": "string",
+				"maxLength": 100
+			},
+			"productOperationalId": {
+				"description": "Операционный продукт",
+				"type": "string",
+				"maxLength": 20
+			},
+			"realtyCategoryCd": {
+				"description": "Код категории объекта недвижимости",
+				"type": "string",
+				"maxLength": 10
+			},
+			"restructureFlg": {
+				"description": "Признак принадлежности к продуктам реструктуризации",
+				"type": "string",
+				"maxLength": 1
+			},
+			"rootAgreementId": {
+				"description": "Код исходного договора",
+				"type": "string",
+				"maxLength": 200
+			},
+			"securedFlg": {
+				"description": "Признак принадлежности к обеспеченным/необеспеченным кредитам",
+				"type": "string",
+				"maxLength": 1
+			},
+			"sourceSystemTypeCd": {
+				"description": "Тип системы-источника заявки",
+				"type": "string",
+				"maxLength": 10
+			},
+			"sourceSystemCd": {
+				"description": "Филиал БИСКВИТ",
+				"type": "string",
+				"maxLength": 10
+			}
+		},
+		"required": [
+			"acceptFlg",
+			"agreementId",
+			"appStatusCd",
+			"applicationDt",
+			"applicationRk",
+			"applyLiabilityFlg",
+			"balanceAmtNc",
+			"collateralRepaymentFlg",
+			"creditProgramCd",
+			"currencyIsoId",
+			"customerTypeCd",
+			"deletedFlg",
+			"isActiveFlg",
+			"lastStateFlg",
+			"liabilityTypeCd",
+			"linksFlg",
+			"loanAmtNc",
+			"monthlyPaymentAmtNc",
+			"productGroupCd",
+			"productOperationalId",
+			"realtyCategoryCd",
+			"restructureFlg",
+			"rootAgreementId",
+			"securedFlg",
+			"sourceSystemTypeCd",
+			"sourceSystemCd"
+		]
+	}
+}

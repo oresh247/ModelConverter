@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "loanRequestId": {
+      "type": "string"
+    },
+    "rbgConnections": {
+      "$ref": "#/definitions/RbgConnectionsDto"
+    },
+    "rbgId": {
+      "type": "string"
+    },
+    "rbgIndividual": {
+      "$ref": "#/definitions/RbgIndividualDto"
+    },
+    "rbgIndividualsObligations": {
+      "$ref": "#/definitions/RbgIndividualsObligationsDto"
+    },
+    "rbgInformation": {
+      "$ref": "#/definitions/RbgInformationDto"
+    },
+    "rbgLegalEntity": {
+      "$ref": "#/definitions/RbgLegalEntityDto"
+    },
+    "rbgLegalEntityObligations": {
+      "$ref": "#/definitions/RbgLegalEntityObligationsDto"
+    }
+  },
+  "title": "RbgDto"
+}

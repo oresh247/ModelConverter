@@ -1,0 +1,146 @@
+{
+  "tags": [
+    {
+      "name": "legal-entity-controller",
+      "description": "Legal Entity Controller"
+    }
+  ],
+  "paths": {
+    "/v1/loan-request/{loanRequestId}/legal-entity": {
+      "get": {
+        "tags": [
+          "legal-entity-controller"
+        ],
+        "summary": "findLegalEntity",
+        "operationId": "findLegalEntityUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "loanRequestId",
+            "in": "path",
+            "description": "loanRequestId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LegalEntityResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "legal-entity-controller"
+        ],
+        "summary": "save",
+        "operationId": "saveUsingPOST_4",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "legalEntityRequest",
+            "description": "legalEntityRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LegalEntityRequest"
+            }
+          },
+          {
+            "name": "loanRequestId",
+            "in": "path",
+            "description": "loanRequestId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/SaveLegalEntityResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/v1/loan-request/{loanRequestId}/legal-entity/info": {
+      "post": {
+        "tags": [
+          "legal-entity-controller"
+        ],
+        "summary": "saveInfo",
+        "operationId": "saveInfoUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "legalEntityInfoRequest",
+            "description": "legalEntityInfoRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LegalEntityInfoRequest"
+            }
+          },
+          {
+            "name": "loanRequestId",
+            "in": "path",
+            "description": "loanRequestId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/SaveLegalEntityResponse"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  }
+}

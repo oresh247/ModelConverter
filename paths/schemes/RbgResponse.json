@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "rbg": {
+      "$ref": "#/definitions/RbgIdDto"
+    }
+  },
+  "title": "RbgResponse"
+}

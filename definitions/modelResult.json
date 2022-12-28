@@ -1,0 +1,426 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "modelResult",
+	"description": "Результат расчетной модели скоринга",
+	"type": "object",
+	"properties": {
+		"customerId": {
+			"type": "number",
+			"maximum": 1000000000,
+			"minimum": 1,
+			"description": "идентификатор заемщика"
+		},
+              "inn": {
+			"type": "number",
+			"maximum": 999999999999,
+			"minimum": 100000000000,
+			"description": "ИНН"
+		},
+              "score": {
+			"type": "number",
+			"maximum": 999999999999.9999,
+			"minimum": 0.0001,
+			"description": "Балл"
+		},
+              "scoreClb": {
+			"type": "number",
+			"maximum": 999999999999.9999,
+			"minimum": 0.0001,
+			"description": "Значение каллиброванного скора"
+		},
+              "pd": {
+			"type": "number",
+			"maximum": 9999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "Вероятность дефолта"
+		},
+              "rating": {
+			"type": "number",
+			"maximum": 9999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "рейтинг"
+		},
+              "ratingCd": {
+              	"type": "string",
+              	"maxLength": 30,
+              	"description": "код рейтинга"
+              },
+              "limit": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "лимит"
+		},
+              "parametrsCount": {
+			"type": "number",
+			"maximum": 999,
+			"minimum": 1,
+			"description": "количество параметров в скоринговой карте"
+		},
+              "errorCd": {
+			"type": "number",
+			"maximum": 9999999999,
+			"minimum": 1,
+			"description": "код ошибки результата"
+		},
+              "errorMsg": {
+              	"type": "string",
+              	"maxLength": 1000,
+              	"description": "сообщение об ошибке"
+              },
+              "modelName": {
+              	"type": "string",
+              	"maxLength": 30,
+              	"description": "название модели"
+              },
+              "modelVer": {
+              	"type": "string",
+              	"maxLength": 30,
+              	"description": "версия модели"
+              },
+              "dateCalc": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "дата расчета"
+              },
+              "sparkDate": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "дата расчета Спарк"
+              },
+              "pravoDate": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "дата расчета Право"
+              },
+              "transactionDate": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Дата расчета транзакционной витрины"
+              },
+              "dttmVal01": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal02": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal03": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal04": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal05": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal06": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal07": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal08": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal09": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal10": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal11": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal12": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal13": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal14": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal15": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal16": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal17": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal18": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal19": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "dttmVal20": {
+              	"type": "string",
+              	"format": "date",
+              	"description": "Параметр формата даты"
+              },
+              "numVal01": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal02": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal03": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal04": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal05": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal06": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal07": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal08": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal09": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal10": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal11": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal12": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal13": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal14": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal15": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal16": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal17": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal18": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal19": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "numVal20": {
+			"type": "number",
+			"maximum": 999999999999999999999999.9999,
+			"minimum": 0.0001,
+			"description": "числовой параметр"
+		},
+              "strVal01": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal02": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal03": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal04": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal05": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal06": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal07": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal08": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal09": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal10": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal11": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal12": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal13": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal14": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal15": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal16": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal17": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal18": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal19": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "strVal20": {
+              	"type": "string",
+              	"maxLength": 255,
+              	"description": "строковый параметр"
+              },
+              "sequenceId": {
+              	"type": "integer",
+              	"description": "идентификатор соединения"
+              }
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "decision": {
+      "$ref": "#/definitions/DecisionIdDto"
+    }
+  },
+  "title": "DecisionResponse"
+}

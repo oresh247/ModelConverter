@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "bcsId": {
+      "type": "string"
+    },
+    "legalApplicationParametersBcs": {
+      "$ref": "#/definitions/LegalApplicationParametersBcsDto"
+    },
+    "legalApplicationStatusBcs": {
+      "$ref": "#/definitions/LegalApplicationStatusBcsDto"
+    },
+    "legalPersonalInformationBcs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LegalPersonalInformationBcsDto"
+      }
+    },
+    "loanRequestId": {
+      "type": "string"
+    }
+  },
+  "title": "BcsGetResponse"
+}

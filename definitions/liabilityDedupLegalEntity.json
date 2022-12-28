@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "liabilityDedupLegalEntity",
+	"description": "Дедуплицированные внутренние заявки ЮЛ",
+	"type": "object",
+	"properties": {
+		"liabilityDedupAppLegalEntity": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/liabilityDedupAppLegalEntity.json"
+		},
+		"liabilityDedupIntLegalEntity": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/liabilityDedupIntLegalEntity.json"
+		}
+	},
+	"required": [
+		"liabilityDedupAppLegalEntity",
+		"liabilityDedupIntLegalEntity"
+	]
+}

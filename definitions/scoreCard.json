@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "scoreCard",
+	"description": "Диагностическая информация по работе моделей СПР",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"scorecardCd": {
+				"description": "Код сработавшей скоринговой карты",
+				"type": "string",
+				"maxLength": 20
+			},
+			"score": {
+				"description": "Скоринговый балл",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"finalScore": {
+				"description": "---------------------",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"cutOff": {
+				"description": "______________________",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"scorecardParameters": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/scorecardParameters.json"
+			}
+		}
+	}
+}

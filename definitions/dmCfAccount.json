@@ -1,0 +1,90 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmCfAccount",
+	"description": "Текущие счета физических лиц из КХД",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mdmCustomerId": {
+				"description": " Код клиента MDM",
+				"type": "string",
+				"maxLength": 50
+			},
+			"accountRk": {
+				"description": " Ключ счета",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 10000000000000000000
+			},
+			"accountNum": {
+				"description": " Номер счета",
+				"type": "string",
+				"maxLength": 100
+			},
+			"sourceSystemCd": {
+				"description": " Натуральный ключ системы-источника",
+				"type": "string",
+				"maxLength": 10
+			},
+			"accountTypeCd": {
+				"description": " Тип счета",
+				"type": "string",
+				"maxLength": 30
+			},
+			"branchNm": {
+				"description": " Филиал",
+				"type": "string",
+				"maxLength": 255
+			},
+			"branchId": {
+				"description": " Номер филиала",
+				"type": "string",
+				"maxLength": 10
+			},
+			"openDt": {
+				"description": " Дата открытия",
+				"type": "string",
+				"format": "date"
+			},
+			"closeDt": {
+				"description": " Дата закрытия",
+				"type": "string",
+				"format": "date"
+			},
+			"currencyIsoId": {
+				"description": " Код ISO валюты числовой",
+				"type": "string",
+				"maxLength": 3,
+				"default": "RUB"
+			},
+			"balanceAmt": {
+				"description": " Доступный остаток",
+				"type": "number",
+				"minimum": 0.00005,
+				"maximum": 1000000000000000000000000.00001
+			},
+			"packageNm": {
+				"description": " Код пакета клиента",
+				"type": "string",
+				"maxLength": 20
+			},
+			"accountStatusDesc": {
+				"description": " Статус счета",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dmCfAccountMoveTb": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmCfAccountMoveTb.json"
+			}
+		},
+		"required": [
+			"accountNum",
+			"accountTypeCd",
+			"openDt",
+			"closeDt",
+			"currencyIsoId",
+			"balanceAmt"
+		]
+	}
+}

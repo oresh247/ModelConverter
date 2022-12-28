@@ -1,0 +1,177 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmPprofCorpAccount",
+	"description": "Витрина из КХД. ПП ЮЛ/ИП Счета",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"mdmCustomerRk": {
+				"description": "Суррогатный ключ клиента MDM",
+				"type": "integer"
+			},
+			"mdmCustomerId": {
+				"description": "Код клиента MDM",
+				"type": "string",
+				"maxLength": 100
+			},
+			"branchId": {
+				"description": "Код филиала, в котором открыт счет",
+				"type": "string",
+				"maxLength": 50
+			},
+			"branchNm": {
+				"description": "Наименование филиала, в котором открыт счет",
+				"type": "string",
+				"maxLength": 50
+			},
+			"internalOrgId": {
+				"description": "Код подразделения, в котором открыт счет",
+				"type": "string",
+				"maxLength": 50
+			},
+			"internalOrgNm": {
+				"description": "Наименование подразделения, в котором открыт счет",
+				"type": "string",
+				"maxLength": 50
+			},
+			"productCd": {
+				"description": "Код продукта",
+				"type": "string",
+				"maxLength": 120
+			},
+			"productNm": {
+				"description": "Наименование продукта",
+				"type": "string",
+				"maxLength": 100
+			},
+			"agreementRk": {
+				"description": "Суррогатный ключ договора",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999999999999999999
+			},
+			"contractId": {
+				"description": "Номер договора",
+				"type": "string",
+				"maxLength": 50
+			},
+			"accountTypeInfo": {
+				"description": "Назначение счета",
+				"type": "string",
+				"maxLength": 200
+			},
+			"accountRk": {
+				"description": "Суррогатный ключ счета",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999999999999999999
+			},
+			"accountNum": {
+				"description": "Номер лицевого счета",
+				"type": "string",
+				"maxLength": 28
+			},
+			"accountTypeCd": {
+				"description": "Признак счёта",
+				"type": "string",
+				"maxLength": 50
+			},
+			"currencyIsoId": {
+				"description": "Код ISO валюты цифровой",
+				"maxLength": 3
+			},
+			"openDt": {
+				"description": "Дата открытия счёта",
+				"type": "string",
+				"format": "date"
+			},
+			"closeDt": {
+				"description": "Дата закрытия счёта",
+				"type": "string",
+				"format": "date"
+			},
+			"accountStatusCd": {
+				"description": "Код статуса счета",
+				"type": "string",
+				"maxLength": 10
+			},
+			"balanceAmt": {
+				"description": "Доступный остаток по счету",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"balanceDt": {
+				"description": "Дата предоставления остатка",
+				"type": "string",
+				"format": "date"
+			},
+			"minimumBalanceAmt": {
+				"description": "Сумма неснижаемого остатка",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"minimumBalanceFlg": {
+				"description": "Признак наличия неснижаемого остатка",
+				"type": "string",
+				"maxLength": 1
+			},
+			"minbalChannelPlacementInfo": {
+				"description": "Информация о канале размещения неснижаемого остатка",
+				"type": "string",
+				"maxLength": 50
+			},
+			"interestPeriodCd": {
+				"description": "Код периода начисления процентов на источнике",
+				"type": "string",
+				"maxLength": 50
+			},
+			"interestPeriodDesc": {
+				"description": "Описание периодичности начисления процентов по вкладам",
+				"type": "string",
+				"maxLength": 100
+			},
+			"accountBlockFlg": {
+				"description": "Признак блокировки счета",
+				"type": "string",
+				"maxLength": 50
+			},
+			"accountBlockAmt": {
+				"description": "Заблокированная сумма на счете",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 99999999999999999999999.99999
+			},
+			"accountBlockDt": {
+				"description": "Дата блокировки счета",
+				"type": "string",
+				"format": "date"
+			},
+			"sourceSystemCd": {
+				"description": "Код системы ведения счета",
+				"type": "string",
+				"maxLength": 10
+			},
+			"legalEntityId": {
+				"description": "Суррогатный ключ ЮЛ в СКМБ",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 99999999999999999999
+			},
+			"dmPprofCorpAccountMove": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/dmPprofCorpAccountMove.json"
+			}
+		},
+		"required": [
+			"accountNum",
+			"accountTypeCd",
+			"currencyIsoId",
+			"openDt",
+			"closeDt",
+			"accountStatusCd",
+			"balanceAmt"
+		]
+	}
+}

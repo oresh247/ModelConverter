@@ -1,0 +1,194 @@
+{
+  "tags": [
+    {
+      "name": "loan-request-controller",
+      "description": "Loan Request Controller"
+    }
+  ],
+  "paths": {
+    "/v1/loan-request": {
+      "post": {
+        "tags": [
+          "loan-request-controller"
+        ],
+        "summary": "save",
+        "operationId": "saveUsingPOST_5",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "loanRequestDto",
+            "description": "loanRequestDto",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoanRequestDtoReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LoanResponseDto"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/v1/loan-request/array": {
+      "post": {
+        "tags": [
+          "loan-request-controller"
+        ],
+        "summary": "saveAll",
+        "operationId": "saveAllUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "applications",
+            "description": "applications",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LoanApplicationDtoReq"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LoanRequestIdDto"
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/v1/loan-request/{loanRequestId}": {
+      "get": {
+        "tags": [
+          "loan-request-controller"
+        ],
+        "summary": "get",
+        "operationId": "getUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "loanRequestId",
+            "in": "path",
+            "description": "loanRequestId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LoanRequestDtoRes"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/v1/loan-request/{loanRequestId}/status_update/{statusCdExt}": {
+      "patch": {
+        "tags": [
+          "loan-request-controller"
+        ],
+        "summary": "patch",
+        "operationId": "patchUsingPATCH",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "loanRequestId",
+            "in": "path",
+            "description": "loanRequestId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "statusCdExt",
+            "in": "path",
+            "description": "statusCdExt",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LoanStatusResponseDto"
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    }
+  }
+}

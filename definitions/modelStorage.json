@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "modelStorage",
+	"description": "Данные, поступающие их хранилища скоринговых моделей",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"modelId": {
+				"description": "Id  модели",
+				"type": "string"
+			},
+			"modelResult": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/modelResult.json"
+			},
+			"modelParameters": {
+				"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/modelParameters.json"
+			}
+		}
+	}
+}

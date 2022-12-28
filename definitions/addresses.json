@@ -1,0 +1,94 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "addresses",
+	"description": "массив адресов",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"addressTypeMdmId": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"fullAddress": {
+				"type": "string",
+				"maxLength": 500
+			},
+			"countryCd": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"zipCode": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"regionType": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"region": {
+				"type": "string",
+				"maxLength": 100
+			},
+			"areaType": {
+				"type": "string"
+			},
+			"area": {
+				"type": "string",
+				"maxLength": 100
+			},
+			"location": {
+				"type": "string",
+				"maxLength": 100
+			},
+			"locationType": {
+				"type": "string"
+			},
+			"building": {
+				"type": "string"
+			},
+			"cityType": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"city": {
+				"type": "string",
+				"maxLength": 100
+			},
+			"streetType": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"street": {
+				"type": "string",
+				"maxLength": 100
+			},
+			"corp": {
+				"type": "string",
+				"maxLength": 10
+			},
+			"house": {
+				"type": "string",
+				"maxLength": 10
+			},
+			"apartment": {
+				"type": "string",
+				"maxLength": 20
+			},
+			"kladr": {
+				"type": "string",
+				"maxLength": 19
+			},
+			"fiasId": {
+				"type": "string"
+			}
+		},
+		"required": [
+			"addressTypeMdmId",
+			"fullAddress",
+			"region",
+			"city",
+			"kladr"
+		]
+	}
+}

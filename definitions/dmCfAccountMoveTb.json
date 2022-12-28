@@ -1,0 +1,98 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "dmCfAccountMoveTb",
+	"description": "Движения по счетам ЮЛ Телебанка из КХД",
+	"properties": {
+		"customerMdmId": {
+			"description": "Код клиента MDM",
+			"type": "string",
+			"maxLength": 100
+		},
+		"accountRk": {
+			"description": "Ключ счета",
+			"type": "number",
+			"minimum": 1,
+			"maximum": 1000000000000000000
+		},
+		"accountNum": {
+			"description": "Номер счета",
+			"type": "string",
+			"maxLength": 100
+		},
+		"accountStatusCd": {
+			"description": "Код статуса счета: 0 Активен, 1 Блокирован, 2 Аннулирован, 3 Закрыт",
+			"type": "string",
+			"maxLength": 10
+		},
+		"currencyIsoId": {
+			"description": "Код валюты ISO",
+			"type": "string",
+			"maxLength": 3,
+			"default": "RUB"
+		},
+		"openDt": {
+			"description": "Дата открытия счёта",
+			"type": "string",
+			"format": "date"
+		},
+		"cLoseDt": {
+			"description": "Дата закрытия счёта",
+			"type": "string",
+			"format": "date"
+		},
+		"firstTransDttm": {
+			"description": "Дата и время первой транзакции",
+			"type": "string",
+			"format": "date-time"
+		},
+		"lastTransDttm": {
+			"description": "Дата и время последней транзакции",
+			"type": "string",
+			"format": "date-time"
+		},
+		"reportDt": {
+			"description": "Отчетная дата",
+			"type": "string",
+			"format": "date"
+		},
+		"turnDebetAmtNc": {
+			"description": "Оборот по дебету в национальной валюте",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 1000000000000000000000000.00001
+		},
+		"turnCreditAmtNc": {
+			"description": "Оборот по кредиту в национальной валюте",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 100000000000000000000000.00001
+		},
+		"maxBalanceAmtNc": {
+			"description": "Максимальная сумма остатка на счете в национальной валюте",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 10000000000000000000000.00001
+		},
+		"balanceAmtNc": {
+			"description": "Сумма остатка на счете за отчетную дату, в национальной валюте",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 10000000000000000000000.00001
+		},
+		"systemId": {
+			"description": "Идентификатор системы",
+			"type": "string",
+			"maxLength": 20
+		}
+	},
+	"required": [
+		"accountNum",
+		"accountStatusCd",
+		"currencyIsoId",
+		"openDt",
+		"cLoseDt",
+		"reportDt",
+		"turnDebetAmtNc",
+		"turnCreditAmtNc"
+	]
+}

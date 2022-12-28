@@ -1,0 +1,75 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "creditParameters",
+	"description": "Параметры кредита",
+	"type": "object",
+	"properties": {
+		"productKindCd": {
+			"description": "код типа продукта",
+			"type": "string",
+			"maxLength": 18
+		},
+		"creditTime": {
+			"description": "Период кредитования",
+			"type": "number",
+			"minimum": 1,
+			"maximum": 1000
+		},
+		"creditStake": {
+			"description": "Запрашиваемая ставка (Процентная ставка по продукту)",
+			"type": "number",
+			"minimum": 0.01,
+			"maximum": 100.00
+		},
+		"productName": {
+			"description": "Название продукта",
+			"type": "string",
+			"maxLength": 50
+		},
+		"productCode": {
+			"description": "Код продукта",
+			"type": "string",
+			"maxLength": 20
+		},
+		"subproductCode": {
+			"description": "код субпродукта",
+			"type": "string",
+			"maxLength": 20
+		},
+		"productOperationalId": {
+			"description": "Операционный продукт",
+			"type": "string"
+		},
+		"currencyCd": {
+			"description": "валюта кредита",
+			"type": "string",
+			"maxLength": 3,
+			"default": "RUB"
+		},
+		"requestSum": {
+			"description": "Запрошенная сумма",
+			"type": "number",
+			"minimum": 0.00001,
+			"maximum": 100000000000000000000000.00000
+		},
+		"trmLeadKeyId": {
+			"description": "Уникальный номер участника маркетинговой кампании ЮЛ",
+			"type": "string"
+		},
+		"mdmCustomerId": {
+			"description": "МДМ идентификатор ЮЛ - участника маркетинговой кампании",
+			"type": "string",
+			"maxLength": 100
+		}
+	},
+	"required": [
+		"productKindCd",
+		"creditTime",
+		"creditStake",
+		"productName",
+		"productCode",
+		"currencyCd",
+		"requestSum"
+	],
+	"additionalProperties": false
+}

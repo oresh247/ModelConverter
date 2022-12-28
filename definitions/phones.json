@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "phones",
+	"description": "массив телефонов",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"phoneTypeMdmId": {
+				"type": "string",
+				"maxLength": 30
+			},
+			"phoneNumber": {
+				"type": "string",
+				"maxLength": 50
+			}
+		},
+		"required": [
+			"phoneTypeMdmId",
+			"phoneNumber"
+		]
+	}
+}

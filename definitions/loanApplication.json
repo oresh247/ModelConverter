@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"description": "Comment describing your JSON Schema",
+	"title": "loanApplication",
+	"description": "Заявка на кредит",
+	"type": "object",
+	"properties": {
+		"loanRequestId": {
+			"description": "Идентификатор кредитной заявки",
+			"type": "string",
+			"maxLength": 34
+		},
+		"loanApplicationExtId": {
+			"description": "ID заявки",
+			"type": "string",
+			"maxLength": 18
+		},
+		"loanApplicationCreateDateTime": {
+			"description": "Дата и время создания кредитной",
+			"type": "string",
+			"minLength": 24,
+			"maxLength": 24,
+			"format": "date-time"
+		},
+		"channelCd": {
+			"description": "Канал получения анкеты",
+			"type": "string",
+			"maxLength": 20,
+			"default": "INT-BANK"
+		},
+		"technologyCd": {
+			"description": "Технология выдачи продукта",
+			"type": "string",
+			"maxLength": 18
+		},
+		"statusCdExt": {
+			"description": "Код статуса заявки",
+			"type": "string",
+			"maxLength": 18,
+			"default": "start"
+		},
+		"creditParameters": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/creditParameters.json"
+		},
+		"front": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/front.json"
+		}
+	},
+	"required": [
+		"loanRequestId",
+		"loanApplicationExtId",
+		"loanApplicationCreateDateTime",
+		"channelCd",
+		"technologyCd",
+		"statusCdExt"
+	]
+}

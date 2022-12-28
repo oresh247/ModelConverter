@@ -1,0 +1,88 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "sprExtCallRoute",
+	"description": "Описание последовательности вызовов для клиента по результатам проверки в СПР",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"callInRouteFlg": {
+				"description": "Внутреннее поле СПР, не используется в ОКР. Флаг выставляется в Y, если внешняя система есть в предполагаемом маршруте опроса для данного клиента. Не используется ОКР для выполнения обогащения данных. См. CallRequired",
+				"type": "integer",
+				"maximum": 1
+			},
+			"callPreReq": {
+				"description": "ID внешней системы – пререквизита (система, которую необходимо вызвать до вызова системы ExtSysID)",
+				"type": "integer",
+				"minimum": 1,
+				"maximum": 9999999999
+			},
+			"callRequiredFlg": {
+				"description": "Признак необходимости вызова внешней системы – используется ОКР для обогащения данных",
+				"type": "integer",
+				"maximum": 1
+			},
+			"chCacheStartDt": {
+				"description": "Дата актуальности кэша КИ",
+				"type": "string",
+				"format": "date"
+			},
+			"clientTypeCd": {
+				"description": "Тип клиента ФЛ или ЮЛ",
+				"type": "string",
+				"maxLength": 50
+			},
+			"customerId": {
+				"description": "Суррогатный ключ клиента ФЛ в СКМБ (В паре с PACK_ID позволяет идентифицировать запись в сущности SPR_RESULT)",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999999999
+			},
+			"legalEntityId": {
+				"description": "Суррогатный ключ клиента ЮЛ в СКМБ (В паре с PACK_ID позволяет идентифицировать запись в сущности SPR_RESULT)",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 999999999999
+			},
+			"eiCallReq": {
+				"description": "Признак необходимости запроса в Эквифакс",
+				"type": "integer",
+				"maximum": 1
+			},
+			"extSysCd": {
+				"description": "ID внешней системы",
+				"type": "number",
+				"maximum": 9999999999
+			},
+			"nbchCallReq": {
+				"description": "Признак необходимости запроса в НБКИ",
+				"type": "integer",
+				"maximum": 1
+			},
+			"ochCallReq": {
+				"description": "Признак необходимости запроса в ОКБ",
+				"type": "integer",
+				"maximum": 1
+			},
+			"callDoneFlg": {
+				"description": "Заполняется ОКР",
+				"type": "integer",
+				"maximum": 1
+			}
+		},
+		"required": [
+			"callInRouteFlg",
+			"callPreReq",
+			"callRequiredFlg",
+			"chCacheStartDt",
+			"clientTypeCd",
+			"customerId",
+			"legalEntityId",
+			"eiCallReq",
+			"extSysCd",
+			"nbchCallReq",
+			"ochCallReq",
+			"callDoneFlg"
+		]
+	}
+}

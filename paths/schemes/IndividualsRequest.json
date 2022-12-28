@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "individuals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IndividualsDto"
+      }
+    }
+  },
+  "title": "IndividualsRequest"
+}

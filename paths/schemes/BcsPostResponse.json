@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "bcs": {
+      "$ref": "#/definitions/BcsIdDto"
+    }
+  },
+  "title": "BcsPostResponse"
+}

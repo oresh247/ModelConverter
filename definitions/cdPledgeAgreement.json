@@ -1,0 +1,70 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "cdPledgeAgreement",
+	"description": "Залоги по кредитным договорам и договорам гарантий",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"agreementRk": {
+				"description": "Ключ кредитного договора",
+				"type": "number",
+				"minimum": 1,
+				"maximum": 100000000000000000
+			},
+			"pledgeGroupCd": {
+				"description": "Код группы залога",
+				"type": "integer"
+			},
+			"collateralTypeCd": {
+				"description": "Код типа залога",
+				"type": "string",
+				"maxLength": 90
+			},
+			"guaranteeRate": {
+				"description": "Процент обеспечения кредитного продукта",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"pledgeAmt": {
+				"description": "Залоговая стоимость имущества в валюте",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"assessedValueAmt": {
+				"description": "Оценочная стоимость в валюте",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"marketValueAmt": {
+				"description": "Рыночная стоимость на момент последнего мониторинга в валюте",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"startMarketValueAmt": {
+				"description": "Стартовая рыночная стоимость",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"pledgeReservationAmt": {
+				"description": "Сумма залога, используемая для расчёта резерва",
+				"type": "number",
+				"minimum": 0.00001,
+				"maximum": 10000000000000000000000
+			},
+			"isActiveFlg": {
+				"description": "Флаг актуальности записи",
+				"type": "string"
+			},
+			"deletedFlg": {
+				"description": "Флаг удаления записи",
+				"type": "string"
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"title": "decisionResult",
+	"description": "Таблица с результатом рассчета в СПР",
+	"properties": {
+		"decision": {
+			"description": "Финальное решение",
+			"type": "string",
+			"maxLength": 15
+		},
+		"stopFactorCdList": {
+			"description": "Список кодов стоп-факторов или непройденых минимальных условий по клиенту",
+			"type": "string",
+			"maxLength": 255
+		},
+		"rating": {
+			"description": "Рейтинг клиента",
+			"type": "string",
+			"maxLength": 18
+		},
+		"quality": {
+			"description": "Качество обслуживания долга",
+			"type": "string",
+			"maxLength": 18
+		},
+		"finCondition": {
+			"description": "Оценка финансового состояния",
+			"type": "string",
+			"maxLength": 18
+		},
+		"refusalGroup": {
+			"description": "Группа отказа",
+			"type": "string",
+			"maxLength": 50
+		},
+		"scoreCard": {
+			"$ref": "file:///C:/Users/valerii.raznomazov/Documents/Altova/XMLSpy2021/Examples/ModelData/schemas/scoreCard.json"
+		}
+	},
+	"required": [
+		"decision",
+		"stopFactorCdList",
+		"rating",
+		"quality",
+		"finCondition",
+		"refusalGroup"
+	]
+}

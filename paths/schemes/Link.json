@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "href": {
+      "type": "string"
+    },
+    "templated": {
+      "type": "boolean"
+    }
+  },
+  "title": "Link"
+}
